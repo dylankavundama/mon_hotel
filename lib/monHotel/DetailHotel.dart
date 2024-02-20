@@ -87,12 +87,14 @@ class DetailPage extends StatelessWidget {
             onPressed: () {
               String url =
                   "https://wa.me/+243854344433/?text=Salut,J'aimerai reserver a lhotel ${titre} ";
+              // ignore: deprecated_member_use
               launch(url);
             },
           ),
           TextButton(
               child: Text('appeler'),
               onPressed: () {
+                // ignore: deprecated_member_use
                 launch('tel:0977734735');
               })
         ],
