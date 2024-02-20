@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage(
@@ -14,6 +15,16 @@ class DetailPage extends StatelessWidget {
   final String titre;
   final String detail;
   final String image;
+
+  void _makePhoneCall(String phoneNumber) async {
+    final Uri phoneCallUri = Uri(scheme: 'tel', path: phoneNumber);
+    if (await canLaunch(phoneCallUri.toString())) {
+      await launch(phoneCallUri.toString());
+    } else {
+      throw 'Could not launch $phoneCallUri';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +82,19 @@ class DetailPage extends StatelessWidget {
               detail,
             ),
           ),
+          TextButton(
+            child: const Text('Faite une reservation'),
+            onPressed: () {
+              String url =
+                  "https://wa.me/+243854344433/?text=Salut,J'aimerai reserver a lhotel ${titre} ";
+              launch(url);
+            },
+          ),
+          TextButton(
+              child: Text('appeler'),
+              onPressed: () {
+                launch('tel:0977734735');
+              })
         ],
       ),
     );
