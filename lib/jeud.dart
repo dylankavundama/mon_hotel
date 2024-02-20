@@ -18,9 +18,6 @@ class _JeudiClassState extends State<JeudiClass> {
     const MercrediPage(),
   ];
 
-  void _listbotton(int index) {
-    indeCurrent = index;
-  }
 
   Widget build(BuildContext context) {
     return Scaffold(

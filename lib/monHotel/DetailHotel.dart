@@ -92,7 +92,7 @@ class DetailPage extends StatelessWidget {
             },
           ),
           TextButton(
-              child: Text('appeler'),
+              child: const Text('appeler'),
               onPressed: () {
                 // ignore: deprecated_member_use
                 launch('tel:0977734735');
