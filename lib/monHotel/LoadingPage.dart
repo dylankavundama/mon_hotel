@@ -15,7 +15,7 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), PageSuivante);
+    Timer(const Duration(seconds: 2), PageSuivante);
   }
 
   // ignore: non_constant_identifier_names

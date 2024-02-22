@@ -9,12 +9,14 @@ class DetailPage extends StatelessWidget {
       required this.hightScreen,
       required this.titre,
       required this.image,
+      required this.image1,
       required this.widthtScreen});
   final double hightScreen;
   final double widthtScreen;
   final String titre;
   final String detail;
   final String image;
+  final String image1;
 
   void _makePhoneCall(String phoneNumber) async {
     final Uri phoneCallUri = Uri(scheme: 'tel', path: phoneNumber);
@@ -51,7 +53,7 @@ class DetailPage extends StatelessWidget {
             onPressed: () async {
               Share.share('Voila mon hotel prefererer : $titre,$detail,$image');
             },
-            icon: const Icon(Icons.share),
+            icon: const Icon(Icons.share, size: 19),
           )
         ],
       ),
@@ -68,14 +70,26 @@ class DetailPage extends StatelessWidget {
           ),
           const SizedBox(height: 3),
           Padding(
-            padding: const EdgeInsets.all(3.0),
-            child: Image.asset(
-              image,
-              fit: BoxFit.cover,
-              height: hightScreen * 0.3,
-              width: widthtScreen,
-            ),
-          ),
+              padding: const EdgeInsets.all(3.0),
+              child: Column(
+                children: [
+                  Image.asset(
+                    image,
+                    fit: BoxFit.cover,
+                    height: hightScreen * 0.3,
+                    width: widthtScreen,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 11),
+                  ),
+                  Image.network(
+                    image1,
+                    fit: BoxFit.cover,
+                    height: hightScreen * 0.3,
+                    width: widthtScreen,
+                  ),
+                ],
+              )),
           Padding(
             padding: const EdgeInsets.all(3.0),
             child: Text(
