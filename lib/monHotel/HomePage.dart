@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
-import 'package:test/detail.dart';
+
 import 'package:test/monHotel/DetailHotel.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
 
               Share.share(partage);
             },
-            icon: const Icon(Icons.share),
+            icon: const Icon(Icons.share,size: 19,),
           )
         ],
       ),

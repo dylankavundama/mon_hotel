@@ -29,6 +29,7 @@ class _LoadingPageState extends State<LoadingPage> {
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal[200],

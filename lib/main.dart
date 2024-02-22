@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:test/monHotel/LoadingPage.dart';
 
 void main() {
@@ -14,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Mon Hotel',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.blue,
       ),
       home: const LoadingPage(),
     );
