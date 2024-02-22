@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test/NewScreen.dart';
-import 'package:test/jeud.dart';
-import 'package:test/mardi.dart';
-import 'package:test/mercredi.dart';
-import 'package:test/monHotel/LoadingPage.dart';
 
-import 'exercice.dart';
+import 'package:test/monHotel/LoadingPage.dart';
 
 void main() {
   runApp(
