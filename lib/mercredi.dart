@@ -45,7 +45,6 @@ class _MercrediPageState extends State<MercrediPage> {
               ),
             ),
             Container(
-              
               decoration: const BoxDecoration(
                 color: Color.fromARGB(66, 9, 86, 73),
                 borderRadius: BorderRadius.all(
