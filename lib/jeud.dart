@@ -18,7 +18,7 @@ class _JeudiClassState extends State<JeudiClass> {
     const MercrediPage(),
   ];
 
-
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomSheet: Page[indeCurrent],
